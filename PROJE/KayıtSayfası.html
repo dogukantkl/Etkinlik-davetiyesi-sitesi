@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<title>Kayıt Formu</title>
+<link rel="icon" type="img" href="img/kutlama.ico">
+<style>
+ body {
+font-family: Arial, sans-serif;
+margin: 0;
+min-height: 100vh;
+background-color: #f0f0f0;
+display: flex;
+flex-direction: column;
+align-items: center;
+    }
+nav {
+width: 100%;
+background-color: rgba(0,0,0,0.7);
+padding: 10px 0;
+text-align: center;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1000;
+    }
+nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: inline-flex;
+gap: 30px;
+    }
+nav ul li a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+font-size: 16px;
+transition: color 0.3s ease;
+    }
+nav ul li a:hover {
+color: #6c63ff;
+    }
+.container {
+margin-top: 80px; 
+background: white;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+max-width: 400px;
+width: 100%;
+    }
+.container h2 {
+text-align: center;
+margin-bottom: 20px;
+color: #333;
+    }
+label {
+display: block;
+margin-top: 15px;
+font-weight: bold;
+color: #555;
+    }
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border-radius: 5px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+	}
+.Cinput [type="text"]{
+width: 100%;
+padding: 40px;
+margin-top: 5px;
+border-radius: 5px;
+border: 1px solid #ccc;
+box-sizing: border-box;			
+    }
+button{
+margin-top: 10px;
+width: 100%;
+background-color: #6c63ff;
+color: white;
+padding: 15px;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s ease;
+    }
+input[type="submit"]:hover {
+background-color: #574bff;
+    }
+	
+</style>
+</head>
+<body>
+
+<nav>
+<ul>
+<li><a href="file:///C:/Users/user/OneDrive/Desktop/PROJE/anasayfa.html">Ana Sayfa</a></li>     
+<li><a href="file:///C:/Users/user/OneDrive/Desktop/PROJE/detaylar.html">Detaylar</a></li>
+<li><a href="file:///C:/Users/user/OneDrive/Desktop/PROJE/KayıtSayfası.html">Kayıt formu</a></li>
+</ul>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<h2>Parti kaydı</h2>
+<form>
+<label for="isim">İsim:</label>
+<input type="text" id="isim" name="isim" required>  
+<label for="email">E-posta:</label>
+<input type="email" id="email" name="email" required>
+<label for="quantity">Kişi Sayısı:</label>
+<input type="number" id="quantity" name="quantity" min="1" required>
+<div class="Cinput"> <label for="not">Not(isteğe bağlı):</label>
+<input type="text" id="not" name="not" value=""></div>
+<input type="radio" id="geliyorum" name="geliyorum" value="geliyorum" >
+<label for="geliyorum">Katılacağım</label><br>
+<input type="radio" id="gelmiyorum" name="gelmiyorum" value="gelmiyorum">
+<label for="gelmiyorum">Katılmayacağım</label><br> 
+<button onclick="uyariGoster()">Kayıt Oluştur</button>
+<script>
+  function uyariGoster(){
+     alert("Kaydınız başarıyla oluşturulmuştur.");
+	}
+</script>
+</form> 
+
+</body>
+</html>
